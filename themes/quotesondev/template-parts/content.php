@@ -14,5 +14,7 @@
 	</div><!-- .entry-content -->
 </article><!-- #post-## -->
 <?php if (is_home() || is_single()) : ?>
-	<button type="button" id="new-quote-button">Show Me Another</button>
+	<div class="btn">
+		<button type="button" id="btn-another" class="btn-green">Show Me Another</button>
+	</div>
 <?php endif; ?>

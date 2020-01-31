@@ -77,7 +77,9 @@ template {
   display: none; }
 
 a {
-  background-color: transparent; }
+  background-color: transparent;
+  -webkit-transition: 0.3s;
+  transition: 0.3s; }
 
 a:active,
 a:hover {
@@ -151,7 +153,9 @@ textarea {
   margin: 0; }
 
 button {
-  overflow: visible; }
+  overflow: visible;
+  -webkit-transition: 0.3s;
+  transition: 0.3s; }
 
 button,
 select {
@@ -459,7 +463,8 @@ a {
   a:visited {
     color: #5EC13C; }
   a:hover, a:focus, a:active {
-    color: #5EC13C; }
+    color: #5EC13C;
+    opacity: 0.6; }
   a:focus {
     outline: thin dotted; }
   a:hover, a:active {
@@ -652,7 +657,7 @@ body {
       body .fa-quote-right, body .fa-quote-left {
         position: absolute;
         font-size: 7rem;
-        color: #5ec13c;
+        color: #5EC13C;
         display: inline; } }
   body .fa-quote-left {
     left: 0; }
@@ -662,6 +667,24 @@ body {
     font-size: 2rem; }
   body .entry-title {
     font-size: 1.6rem; }
+  body .entry-content p {
+    font-size: 1.9rem; }
+  body .btn {
+    text-align: center; }
+  body .btn-green {
+    text-align: center;
+    background: transparent;
+    border: 2px solid #5EC13C;
+    -webkit-box-shadow: none;
+            box-shadow: none;
+    text-shadow: none;
+    padding: 10px 30px;
+    color: #5EC13C;
+    font-size: 1.2rem;
+    font-weight: bold; }
+    body .btn-green:hover {
+      color: #222222;
+      background-color: #5EC13C; }
 
 .search-results .page-title {
   border-bottom: 1px dotted #fff;

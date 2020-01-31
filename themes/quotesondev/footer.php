@@ -12,7 +12,7 @@
 
 <footer id="colophon" class="site-footer footer" role="contentinfo">
 	<nav class="footer__nav">
-		<a href="" class="footer__item">About</a>
+		<a href="<?php echo esc_url(home_url('/')); ?>/about" class="footer__item">About</a>
 		<a href="" class="footer__item">Archives</a>
 		<a href="" class="footer__item">Submit a Quote</a>
 		<p class="footer__item">Brought to you by <a href="">RED Academy</a></p>

@@ -2,7 +2,7 @@
     $(function () {
         let lastPage = document.URL;
         //1 get request wp/v2/posts
-        $('#new-quote-button').on('click', function (event) {
+        $('#btn-another').on('click', function (event) {
             event.preventDefault();
             lastPage = document.URL;
             $.ajax({
