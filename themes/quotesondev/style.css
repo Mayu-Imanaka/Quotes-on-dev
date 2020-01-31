@@ -218,9 +218,34 @@ td,
 th {
   padding: 0; }
 
-/*--------------------------------------------------------------
-# Embedded Fonts
---------------------------------------------------------------*/
+@font-face {
+  font-family: 'Exo';
+  src: url("../../fonts/Exo-LightItalic.eot");
+  src: url("../../fonts/Exo-LightItalic.eot?#iefix") format("embedded-opentype"), url("../../fonts/Exo-LightItalic.woff2") format("woff2"), url("../../fonts/Exo-LightItalic.woff") format("woff"), url("../../fonts/Exo-LightItalic.ttf") format("truetype");
+  font-weight: 300;
+  font-style: italic; }
+
+@font-face {
+  font-family: 'Exo';
+  src: url("../../fonts/Exo-Light.eot");
+  src: url("../../fonts/Exo-Light.eot?#iefix") format("embedded-opentype"), url("../../fonts/Exo-Light.woff2") format("woff2"), url("../../fonts/Exo-Light.woff") format("woff"), url("../../fonts/Exo-Light.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Exo';
+  src: url("../../fonts/Exo-Medium.eot");
+  src: url("../../fonts/Exo-Medium.eot?#iefix") format("embedded-opentype"), url("../../fonts/Exo-Medium.woff2") format("woff2"), url("../../fonts/Exo-Medium.woff") format("woff"), url("../../fonts/Exo-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Exo';
+  src: url("../../fonts/Exo-MediumItalic.eot");
+  src: url("../../fonts/Exo-MediumItalic.eot?#iefix") format("embedded-opentype"), url("../../fonts/Exo-MediumItalic.woff2") format("woff2"), url("../../fonts/Exo-MediumItalic.woff") format("woff"), url("../../fonts/Exo-MediumItalic.ttf") format("truetype");
+  font-weight: 500;
+  font-style: italic; }
+
 /*--------------------------------------------------------------
 # Typography
 --------------------------------------------------------------*/
@@ -229,10 +254,11 @@ button,
 input,
 select,
 textarea {
-  color: #404040;
-  font-family: sans-serif;
-  font-size: 1rem;
-  line-height: 1.5; }
+  color: #fff;
+  font-family: "Exo", sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  font-weight: 300; }
 
 /* Headings */
 h1, h2, h3, h4, h5, h6 {
@@ -276,6 +302,23 @@ mark, ins {
 big {
   font-size: 125%; }
 
+h1, h2 {
+  line-height: 1.25; }
+
+h1 {
+  font-size: 2.4rem;
+  margin-bottom: .5rem; }
+
+h2 {
+  color: #2f1339;
+  font-size: 2.1rem;
+  margin-bottom: 1.5rem; }
+
+h3 {
+  font-size: 28.8px;
+  font-size: 1.8rem;
+  line-height: 1.25; }
+
 /*--------------------------------------------------------------
 # Elements
 --------------------------------------------------------------*/
@@ -292,7 +335,7 @@ html {
           box-sizing: inherit; }
 
 body {
-  background: #fff;
+  background: #222222;
   /* Fallback for when there is no custom background color defined. */ }
 
 blockquote,
@@ -411,11 +454,12 @@ textarea {
 --------------------------------------------------------------*/
 /* Links */
 a {
-  color: royalblue; }
+  color: #5EC13C;
+  text-decoration: none; }
   a:visited {
-    color: purple; }
+    color: #5EC13C; }
   a:hover, a:focus, a:active {
-    color: midnightblue; }
+    color: #5EC13C; }
   a:focus {
     outline: thin dotted; }
   a:hover, a:active {
@@ -591,5 +635,63 @@ object {
 /*--------------------------------------------------------------
 # Page Templates
 --------------------------------------------------------------*/
-/* All Archives Page */
-/* Submit a Quote Page */
+@media (min-width: 980px) {
+  body {
+    width: 1120px;
+    margin-right: auto;
+    margin-left: auto;
+    position: relative; } }
+
+body .fa-quote-right, body .fa-quote-left {
+  position: absolute;
+  font-size: 7rem;
+  color: #5ec13c; }
+
+body .fa-quote-left {
+  left: 0; }
+
+body .fa-quote-right {
+  right: 0; }
+
+.header {
+  margin-top: 50px;
+  margin-bottom: 70px; }
+  @media (min-width: 980px) {
+    .header {
+      width: 700px;
+      margin-right: auto;
+      margin-left: auto; } }
+  .header__logo {
+    text-align: center; }
+    @media (min-width: 980px) {
+      .header__logo img {
+        width: 100%; } }
+
+.site-content {
+  margin-bottom: 60px; }
+  @media (min-width: 980px) {
+    .site-content {
+      width: 700px;
+      margin-right: auto;
+      margin-left: auto; } }
+
+.footer {
+  margin-bottom: 80px; }
+  .footer__nav {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end; }
+  .footer__item {
+    border-right: 1px solid #fff;
+    padding: 0 15px; }
+    .footer__item:last-child {
+      border-right: none; }
+  .footer p {
+    display: block; }
+    @media (min-width: 760px) {
+      .footer p {
+        display: inline-block;
+        margin: 0; } }

@@ -3,7 +3,9 @@
   "version": "1.0.0",
   "description": "A WordPress starter theme for the Quotes on Dev project, forked from Underscores.",
   "main": "gulpfile.js",
-  "dependencies": {},
+  "dependencies": {
+    "@fortawesome/fontawesome-free": "^5.12.0"
+  },
   "devDependencies": {
     "browser-sync": "^2.26.7",
     "gulp": "^4.0.0",

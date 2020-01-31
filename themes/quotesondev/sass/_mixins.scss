@@ -1,6 +1,59 @@
+// Rem output with px fallback
+@mixin font-size($sizeValue: 1) {
+	font-size: ($sizeValue * 16) * 1px;
+	font-size: $sizeValue * 1rem;
+}
+
 // Center block
 @mixin center-block {
 	display: block;
 	margin-left: auto;
 	margin-right: auto;
+}
+
+@mixin push-auto {
+	margin: { 
+		left: auto;
+		right: auto;
+	}
+  }
+  
+@mixin content-wrapper{
+	width: 1120px;
+    margin-right: auto;
+	margin-left: auto;
+}
+
+@mixin text-wrapper{
+  width: 700px;
+  margin-right: auto;
+	margin-left: auto;
+}
+
+$sp: 415px; 
+$tb: 760px;
+$pc: 980px; 
+
+@mixin sp {
+  @media (max-width: $sp) {
+    @content;
+  }
+}
+
+@mixin tb {
+  @media (min-width: $sp) and (max-width: $pc) {
+    @content;
+  }
+}
+
+@mixin pc {
+  @media (min-width: $pc) {
+    @content;
+  }
+}
+
+@mixin pcandtb{
+  @media (min-width: $tb) {
+    @content;
+  }
 }

@@ -2,6 +2,65 @@
 # Page Templates
 --------------------------------------------------------------*/
 
-/* All Archives Page */
+body{
+    @include pc{
+    @include content-wrapper;
+    position: relative;
+    }
+    .fa-quote-right, .fa-quote-left{
+        position: absolute;
+        font-size: 7rem;
+        color: #5ec13c;
+    }
+    .fa-quote-left{
+        left: 0;
+    }
+    .fa-quote-right{
+        right: 0;
+    }
+}
 
-/* Submit a Quote Page */
+.header{
+    @include pc{
+    @include text-wrapper;
+    }
+    margin-top: 50px;
+    margin-bottom: 70px;
+    &__logo{
+        text-align: center;
+        img{
+            @include pc{
+            width: 100%;
+            }
+        }
+    }
+}
+
+.site-content{
+    margin-bottom: 60px;
+    @include pc{
+        @include text-wrapper;
+        }
+}
+
+.footer{
+    margin-bottom: 80px;
+    &__nav{
+    display: flex;
+    justify-content: flex-end;
+}
+&__item{
+    border-right: 1px solid #fff;
+    padding: 0 15px;
+    &:last-child{
+        border-right: none;
+    }
+}
+p{
+    display: block;
+    @include pcandtb{
+        display: inline-block;
+        margin: 0;
+    }
+}
+}
