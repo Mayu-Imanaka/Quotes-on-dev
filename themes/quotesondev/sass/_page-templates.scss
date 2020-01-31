@@ -3,14 +3,22 @@
 --------------------------------------------------------------*/
 
 body{
+    padding: 0 10px;
+    @include tb{
+        padding: 0 20px;
+    }
     @include pc{
     @include content-wrapper;
     position: relative;
     }
     .fa-quote-right, .fa-quote-left{
+        display: none;
+        @include pc{
         position: absolute;
         font-size: 7rem;
         color: #5ec13c;
+        display: inline;
+    }
     }
     .fa-quote-left{
         left: 0;
@@ -18,17 +26,33 @@ body{
     .fa-quote-right{
         right: 0;
     }
+    .page-title{
+        font-size: 2rem;
+    }
+    .entry-title{
+        font-size: 1.6rem;
+    }
+}
+
+.search-results .page-title{
+    border-bottom: 1px dotted #fff;
+    padding-bottom: 17px;
+    line-height: 1.5;
 }
 
 .header{
     @include pc{
     @include text-wrapper;
-    }
-    margin-top: 50px;
     margin-bottom: 70px;
+    }
+    margin-bottom: 50px;
+    margin-top: 50px;
     &__logo{
+        @include pc{
         text-align: center;
+        }
         img{
+            width: 80%;
             @include pc{
             width: 100%;
             }
@@ -47,13 +71,33 @@ body{
     margin-bottom: 80px;
     &__nav{
     display: flex;
-    justify-content: flex-end;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    @include pc{
+        justify-content: flex-end;
+    }
 }
 &__item{
     border-right: 1px solid #fff;
     padding: 0 15px;
     &:last-child{
         border-right: none;
+    }
+    @include tb{
+        &:nth-child(1){
+            padding-left: 0;
+        }
+    }
+    @include sp{
+        &:nth-child(1){
+            padding-left: 0;
+        }
+        &:nth-child(3){
+            border-right: none;
+        }
+        &:last-child{
+            padding-left: 0;
+        }
     }
 }
 p{
@@ -63,4 +107,30 @@ p{
         margin: 0;
     }
 }
+}
+
+.error404{
+    fieldset{
+        border: none;
+        padding: 0;
+        margin: 0;
+        input{
+            background:transparent;
+            border: 2px solid $color__link;
+            width: 250px;
+            color: #ffffff!important;
+            padding: 5px;
+            &:focus{
+                outline: none;
+            }
+        }
+        .search-submit{
+            background:transparent;
+            color: $color__link;
+            box-shadow: none;
+            text-shadow: none;
+            border: none;
+            font-size: 1.3rem;
+        }
+    }
 }
