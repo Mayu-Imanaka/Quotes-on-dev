@@ -665,6 +665,8 @@ body {
     body .btn-green:hover {
       color: #222222;
       background-color: #5EC13C; }
+    body .btn-green:focus {
+      outline: none; }
 
 .search-results .page-title {
   border-bottom: 1px dotted #fff;
@@ -772,3 +774,6 @@ body {
     color: #fff !important; }
     .wpcf7-form label input:focus, .wpcf7-form label textarea:focus {
       outline: none; }
+
+.quote-author, .quote-source {
+  display: inline; }

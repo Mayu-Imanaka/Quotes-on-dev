@@ -22,7 +22,7 @@
     "jQuery": false,
     "$": false,
     "_": false,
-    "qod_api": false
+    "qod_api": false,
   },
   "env": {
     "es6": true,

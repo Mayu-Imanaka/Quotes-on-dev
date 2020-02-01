@@ -12,12 +12,12 @@
                     'wp/v2/posts?filter[orderby]=rand&filter[posts_per_page]=1'
             })
                 .done(function (data) {
-                    newQuote = data[0];
+                    const newQuote = data[0];
                     $('.entry-content').html(newQuote.content.rendered);
-                    $('#author').html('- ' + newQuote.title.rendered);
+                    $('.quote-author').html('ー ' + newQuote.title.rendered);
                     if (newQuote._qod_quote_source && newQuote._qod_quote_source_url) {
-                        $('#source').html(
-                            '<div class=\'source\' id=\'source\'>, <a href=\'' +
+                        $('.quote-source').html(
+                            '<div class=\'quote-source\'>, <a href=\'' +
                             newQuote._qod_quote_source_url +
                             '\'>' +
                             newQuote._qod_quote_source +
@@ -27,13 +27,13 @@
                         newQuote._qod_quote_source &&
                         !newQuote._qod_quote_source_url
                     ) {
-                        $('#source').html(
+                        $('.quote-source').html(
                             '<div class=\'source\' id=\'source\'>, ' +
                             newQuote._qod_quote_source +
                             '</div>'
                         );
                     } else {
-                        $('#source').html('');
+                        $('.quote-source').html('');
                     }
 
                     //History api to get
@@ -44,7 +44,7 @@
                     history.pushState(null, null, url);
                 })
 
-                .fail(function (err) { });
+                .fail(function () { });
         });
 
         //Add history api popstate to forward and back buttons
@@ -53,11 +53,11 @@
         });
 
         //2 post request for wp/v2/posts
-        $('#quote-submission-form').on('submit', function (event) {
-            const authorVal = $('#author').val();
-            const quoteVal = $('#quote').val();
-            const sourceVal = $('#source').val();
-            const sourceURLVal = $('#source_url').val();
+        $('.').on('submit', function (event) {
+            const authorVal = $('.quote-author').val();
+            const quoteVal = $('.quote').val();
+            const sourceVal = $('.source').val();
+            const sourceURLVal = $('.sourceurl').val();
 
             event.preventDefault();
 
@@ -74,7 +74,7 @@
                     xhr.setRequestHeader('X-WP-Nonce', qod_api.wpapi_nonce);
                 }
             })
-                .done(function (response) {
+                .done(function () {
                     $('.submit-form').slideUp();
                     $('.hidden-message')
                         .slideDown()

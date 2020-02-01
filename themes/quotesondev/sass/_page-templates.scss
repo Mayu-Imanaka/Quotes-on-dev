@@ -55,6 +55,9 @@ body{
             color: $color__main;
             background-color: $color__green;
         }
+        &:focus{
+            outline:none;
+        }
     }
 }
 
@@ -181,4 +184,8 @@ p{
             }
         }
     }
+}
+
+.quote-author, .quote-source{
+display: inline;
 }
