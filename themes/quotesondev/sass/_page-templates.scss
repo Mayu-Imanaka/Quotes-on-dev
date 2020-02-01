@@ -4,6 +4,7 @@
 
 body{
     padding: 0 10px;
+
     @include tb{
         padding: 0 20px;
     }
@@ -30,7 +31,7 @@ body{
         font-size: 2rem;
     }
     .entry-title{
-        font-size: 1.6rem;
+        font-size: 2.1rem;
     }
     .entry-content{
         p{
@@ -84,7 +85,7 @@ body{
 }
 
 .site-content{
-    margin-bottom: 60px;
+    margin-bottom: 90px;
     @include pc{
         @include text-wrapper;
         }
@@ -154,6 +155,30 @@ p{
             text-shadow: none;
             border: none;
             font-size: 1.3rem;
+        }
+    }
+}
+
+.wpcf7-form{
+    p{
+        margin-top: 0;
+        margin-bottom: 10px;
+        &:last-of-type{
+            margin-top: 30px;
+        }
+    }
+    label{
+        font-size: 1rem;
+        input{
+            width: 70%;
+        }
+        input, textarea{
+            background: transparent;
+            border: 2px solid $color__green;
+            color:#fff!important;
+            &:focus{
+                outline:none;
+            }
         }
     }
 }
