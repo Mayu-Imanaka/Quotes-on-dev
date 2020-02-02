@@ -655,10 +655,10 @@ body {
     @media (min-width: 415px) and (max-width: 980px) {
       body .type-post .entry-content p {
         font-size: 1.7rem; } }
-  body .btn {
-    text-align: center; }
+  @media (min-width: 980px) {
+    body .btn {
+      text-align: center; } }
   body .btn-green {
-    text-align: center;
     background: transparent;
     border: 2px solid #5EC13C;
     -webkit-box-shadow: none;

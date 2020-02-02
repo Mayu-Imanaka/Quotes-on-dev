@@ -1,6 +1,6 @@
 (function ($) {
     $(function () {
-        let lastPage = document.URL;
+        let lastPage = '';
         //1 get request wp/v2/posts
         $('#btn-another').on('click', function (event) {
             event.preventDefault();
@@ -9,10 +9,11 @@
                 method: 'get',
                 url:
                     qod_api.rest_url +
-                    'wp/v2/posts?filter[orderby]=rand&filter[posts_per_page]=1'
+                    'wp/v2/posts?filter[orderby]=rand&filter[posts_per_page]=1',
+                cache: !1
             })
                 .done(function (data) {
-                    const newQuote = data[0];
+                    const newQuote = data.shift();
                     $('.entry-content').html(newQuote.content.rendered);
                     $('.quote-author').html('- ' + newQuote.title.rendered);
                     if (newQuote._qod_quote_source && newQuote._qod_quote_source_url) {
@@ -45,8 +46,12 @@
                 .fail(function () { });
         });
 
-        //Add history api popstate to forward and back buttons
+        //Add history api popstate
         $(window).on('popstate', function () {
+            if (1 === window
+                .location
+                .hash
+                .indexOf('qm-overview')) { return !1; }
             window.location.replace(lastPage);
         });
 
@@ -73,12 +78,10 @@
                     xhr.setRequestHeader('X-WP-Nonce', qod_api.wpapi_nonce);
                 }
             })
-                .done(function (data) {
+                .done(function () {
                     $('.submit-form').slideUp();
                     $('.hidden-message')
-                        .slideDown()
-                        .delay(1800);
-                    console.log(data[0]);
+                        .slideDown('slow')
                 })
                 .fail(function () {
                     alert('Submission Failed');

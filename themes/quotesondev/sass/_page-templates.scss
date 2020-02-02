@@ -47,10 +47,11 @@ body{
     }
     }
     .btn{
-        text-align: center;
+        @include pc{
+            text-align: center;
+        }
     }
     .btn-green{
-        text-align: center;
         background:transparent;
         border: 2px solid $color__green;
         box-shadow: none;

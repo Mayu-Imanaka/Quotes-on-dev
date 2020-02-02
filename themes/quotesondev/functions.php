@@ -70,7 +70,7 @@ function qod_scripts()
 
 	wp_enqueue_script('qod-starter-skip-link-focus-fix', get_template_directory_uri() . '/build/js/skip-link-focus-fix.min.js', array(), '20151215', true);
 
-	wp_enqueue_script('qod', get_template_directory_uri() . '/build/js/main.min.js', array(), '', true);
+	wp_enqueue_script('qod', get_template_directory_uri() . '/build/js/quote.min.js', array(), '', true);
 
 	wp_localize_script('qod', 'qod_api', array(
 		'rest_url' => esc_url_raw(rest_url()),
