@@ -6,10 +6,10 @@
   "rules": {
     "no-alert": 0,
     "no-bitwise": 0,
-    "camelcase": 1,
+    "camelcase": 0,
     "curly": 1,
     "eqeqeq": 1,
-    "no-console": 1,
+    "no-console": 0,
     "no-eq-null": 0,
     "guard-for-in": 1,
     "no-empty": 1,
@@ -22,7 +22,7 @@
     "jQuery": false,
     "$": false,
     "_": false,
-    "qod_api": false,
+    "qod_api": false
   },
   "env": {
     "es6": true,

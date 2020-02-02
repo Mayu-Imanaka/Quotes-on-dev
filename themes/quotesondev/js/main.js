@@ -38,9 +38,7 @@
 
                     //History api to get
                     const slug = newQuote.slug;
-                    console.log(slug);
                     const url = qod_api.home_url + '/' + slug + '/';
-                    console.log(url);
                     history.pushState(null, null, url);
                 })
 
@@ -53,11 +51,11 @@
         });
 
         //2 post request for wp/v2/posts
-        $('.').on('submit', function (event) {
-            const authorVal = $('.quote-author').val();
-            const quoteVal = $('.quote').val();
-            const sourceVal = $('.source').val();
-            const sourceURLVal = $('.sourceurl').val();
+        $('.wpcf7-form').submit(function (event) {
+            const authorVal = $('input[name="quote-author"]').val();
+            const quoteVal = $('textarea[name="quote"]').val();
+            const sourceVal = $('input[name="source"]').val();
+            const sourceURLVal = $('input[name="sourceurl"]').val();
 
             event.preventDefault();
 
@@ -67,18 +65,20 @@
                 data: {
                     title: authorVal,
                     content: quoteVal,
+                    post_status: 'publish',
                     _qod_quote_source: sourceVal,
-                    _qod_quote_source_url: sourceURLVal
+                    _qod_quote_source_url: sourceURLVal,
                 },
                 beforeSend: function (xhr) {
                     xhr.setRequestHeader('X-WP-Nonce', qod_api.wpapi_nonce);
                 }
             })
-                .done(function () {
+                .done(function (data) {
                     $('.submit-form').slideUp();
                     $('.hidden-message')
                         .slideDown()
                         .delay(1800);
+                    console.log(data[0]);
                 })
                 .fail(function () {
                     alert('Submission Failed');
