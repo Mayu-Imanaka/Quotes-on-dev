@@ -647,8 +647,14 @@ body {
     font-size: 2rem; }
   body .entry-title {
     font-size: 2.1rem; }
-  body .entry-content p {
-    font-size: 1.9rem; }
+  body .type-post .entry-content p {
+    font-size: 1.25rem; }
+    @media (min-width: 980px) {
+      body .type-post .entry-content p {
+        font-size: 2.5rem; } }
+    @media (min-width: 415px) and (max-width: 980px) {
+      body .type-post .entry-content p {
+        font-size: 1.7rem; } }
   body .btn {
     text-align: center; }
   body .btn-green {
@@ -678,7 +684,7 @@ body {
   margin-top: 50px; }
   @media (min-width: 980px) {
     .header {
-      width: 700px;
+      width: 658px;
       margin-right: auto;
       margin-left: auto;
       margin-bottom: 70px; } }
@@ -695,7 +701,7 @@ body {
   margin-bottom: 90px; }
   @media (min-width: 980px) {
     .site-content {
-      width: 700px;
+      width: 658px;
       margin-right: auto;
       margin-left: auto; } }
 
@@ -776,4 +782,21 @@ body {
       outline: none; }
 
 .quote-author, .quote-source {
-  display: inline; }
+  display: inline;
+  font-size: 1.25rem; }
+
+.archives h3 {
+  margin-top: 50px;
+  font-size: 1.5rem; }
+
+.archives__list {
+  list-style-type: none;
+  padding-left: 0;
+  margin-left: 0; }
+  .archives__list li {
+    display: inline-block;
+    margin-right: 15px;
+    margin-bottom: 0.5rem; }
+    @media (min-width: 980px) {
+      .archives__list li {
+        font-size: 1.25rem; } }

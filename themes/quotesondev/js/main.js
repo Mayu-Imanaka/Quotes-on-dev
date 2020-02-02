@@ -14,7 +14,7 @@
                 .done(function (data) {
                     const newQuote = data[0];
                     $('.entry-content').html(newQuote.content.rendered);
-                    $('.quote-author').html('ー ' + newQuote.title.rendered);
+                    $('.quote-author').html('- ' + newQuote.title.rendered);
                     if (newQuote._qod_quote_source && newQuote._qod_quote_source_url) {
                         $('.quote-source').html(
                             '<div class=\'quote-source\'>, <a href=\'' +
@@ -28,7 +28,7 @@
                         !newQuote._qod_quote_source_url
                     ) {
                         $('.quote-source').html(
-                            '<div class=\'source\' id=\'source\'>, ' +
+                            '<div class=\'quote-source\' id=\'source\'>, ' +
                             newQuote._qod_quote_source +
                             '</div>'
                         );

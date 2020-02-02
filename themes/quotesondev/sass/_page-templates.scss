@@ -33,10 +33,18 @@ body{
     .entry-title{
         font-size: 2.1rem;
     }
+    .type-post{
     .entry-content{
         p{
-            font-size: 1.9rem;
+            font-size: 1.25rem;
+            @include pc{
+                font-size: 2.5rem;
+            }
+            @include tb{
+                font-size: 1.7rem;
+            }
         }
+    }
     }
     .btn{
         text-align: center;
@@ -188,4 +196,26 @@ p{
 
 .quote-author, .quote-source{
 display: inline;
+font-size:1.25rem;
+}
+
+.archives{
+    h3{
+        margin-top: 50px;
+        font-size: 1.5rem;
+    }
+    &__list{
+        list-style-type: none;
+        padding-left: 0;
+        margin-left: 0;
+
+        li{
+            display: inline-block;
+            margin-right: 15px;
+            margin-bottom: 0.5rem;
+            @include pc{
+                font-size: 1.25rem;
+            }
+        }
+    }
 }
