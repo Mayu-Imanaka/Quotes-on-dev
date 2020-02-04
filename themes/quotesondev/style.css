@@ -668,9 +668,6 @@ body {
     color: #5EC13C;
     font-size: 1.2rem;
     font-weight: bold; }
-    body .btn-green:hover {
-      color: #222222;
-      background-color: #5EC13C; }
     body .btn-green:focus {
       outline: none; }
 
@@ -800,3 +797,12 @@ body {
     @media (min-width: 980px) {
       .archives__list li {
         font-size: 1.25rem; } }
+
+.number-pagination a {
+  margin: 0 7px; }
+
+.archive .hentry {
+  border-bottom: 1px dotted #fff; }
+
+.archive .entry-meta, .blog .entry-meta, .single .entry-meta {
+  margin-bottom: 3rem; }

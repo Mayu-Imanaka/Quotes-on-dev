@@ -60,10 +60,6 @@ body{
         color: $color__green;
         font-size: 1.2rem;
         font-weight: bold;
-        &:hover{
-            color: $color__main;
-            background-color: $color__green;
-        }
         &:focus{
             outline:none;
         }
@@ -219,4 +215,20 @@ font-size:1.25rem;
             }
         }
     }
+}
+
+.number-pagination{
+    a{
+        margin: 0 7px;
+    }
+}
+
+.archive {
+    .hentry {
+        border-bottom: 1px dotted #fff;
+    }
+}
+
+.archive .entry-meta, .blog .entry-meta, .single .entry-meta {
+    margin-bottom: 3rem;
 }

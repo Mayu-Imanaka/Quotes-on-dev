@@ -100,3 +100,18 @@ require get_template_directory() . '/inc/metaboxes.php';
  * Custom WP API modifications.
  */
 require get_template_directory() . '/inc/api.php';
+
+
+function twpp_change_posts_per_page($query)
+{
+	if (is_admin() || !$query->is_main_query()) {
+		return;
+	}
+	if ($query->is_search()) {
+		$query->set('posts_per_page', 10);
+	}
+	if ($query->is_category() || $query->is_tag()) {
+		$query->set('posts_per_page', 5);
+	}
+}
+add_action('pre_get_posts', 'twpp_change_posts_per_page');
