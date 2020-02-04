@@ -10,7 +10,7 @@
                 url:
                     qod_api.rest_url +
                     'wp/v2/posts?filter[orderby]=rand&filter[posts_per_page]=1',
-                cache: !1
+                cache: false
             })
                 .done(function (data) {
                     const newQuote = data.shift();
@@ -48,7 +48,7 @@
 
         //Add history api popstate
         $(window).on('popstate', function () {
-            if (1 === window
+            if (true === window
                 .location
                 .hash
                 .indexOf('qm-overview')) { return !1; }
