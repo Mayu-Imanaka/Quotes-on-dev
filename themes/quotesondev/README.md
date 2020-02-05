@@ -21,9 +21,5 @@ This is a website called Quotes on Dev using the WordPress REST API.
 
 ## Plugin
 - contact-form-7
-- custom-field-suite
-- duplicate-post
-- inhabitent-blocks-master
-- intuitive-custom-post-order
 - query-monitor
 - wp-migrate-db
