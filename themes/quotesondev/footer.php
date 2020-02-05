@@ -15,7 +15,7 @@
 		<a href="<?php echo esc_url(home_url('/')); ?>about" class="footer__item">About</a>
 		<a href="<?php echo esc_url(home_url('/')); ?>archives" class="footer__item">Archives</a>
 		<a href="<?php echo esc_url(home_url('/')); ?>submit" class="footer__item">Submit a Quote</a>
-		<p class="footer__item">Brought to you by <a href="">RED Academy</a></p>
+		<p class="footer__item">Brought to you by <a href="https://redacademy.com">RED Academy</a></p>
 	</nav>
 </footer><!-- #colophon -->
 </div><!-- #page -->

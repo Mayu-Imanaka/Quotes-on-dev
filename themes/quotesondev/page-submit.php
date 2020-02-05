@@ -16,7 +16,6 @@ get_header(); ?>
 			</header><!-- .entry-header -->
 			<?php if (is_user_logged_in()) : ?>
 				<div class="entry-content">
-					<?php the_content(); ?>
 					<?php echo do_shortcode('[contact-form-7 id="214" title="Submit a quote"]'); ?>
 				</div><!-- .entry-content -->
 			<?php else : ?>

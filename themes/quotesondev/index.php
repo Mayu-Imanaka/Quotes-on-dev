@@ -18,7 +18,7 @@ get_header(); ?>
 					<h1 class="page-title screen-reader-text"><?php single_post_title(); ?></h1>
 				</header>
 			<?php endif; ?>
-            <?php query_posts('posts_per_page=1'); ?>
+			<?php query_posts('posts_per_page=1'); ?>
 			<?php while (have_posts()) : the_post(); ?>
 
 				<?php get_template_part('template-parts/content'); ?>
@@ -30,7 +30,7 @@ get_header(); ?>
 			<?php get_template_part('template-parts/content', 'none'); ?>
 
 		<?php endif; ?>
-
+		<p id="view_area"></p>
 	</main><!-- #main -->
 </div><!-- #primary -->
 

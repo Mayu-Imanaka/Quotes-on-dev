@@ -115,3 +115,33 @@ function twpp_change_posts_per_page($query)
 	}
 }
 add_action('pre_get_posts', 'twpp_change_posts_per_page');
+
+add_action('rest_api_init', function () {
+	register_rest_route('wp/v2', '/org_api', array(
+		'methods' => 'GET',
+		'callback' => 'org_api',
+	));
+});
+function org_api()
+{
+
+	$contents = array(); //return用の配列を準備
+	$myQuery = new WP_Query(); //取得したいデータを設定
+	$param = array(
+		'post_type' => 'blog',
+		'posts_per_page' => 3,
+		'order' => 'DESC'
+	);
+	$myQuery->query($param);
+	if ($myQuery->have_posts()) :
+		while ($myQuery->have_posts()) : $myQuery->the_post();
+			$ID = get_the_ID();
+			$title = get_the_title();
+			array_push($contents, array(
+				"title" => $title,
+				"id" => $ID
+			));
+		endwhile;
+	endif;
+	return $contents; // WP REST APIを利用するときはjsonで返ってくる様に設定されているので、json_encodeは必要ありません。
+}
