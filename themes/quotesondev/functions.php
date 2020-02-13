@@ -125,8 +125,8 @@ add_action('rest_api_init', function () {
 function org_api()
 {
 
-	$contents = array(); //return用の配列を準備
-	$myQuery = new WP_Query(); //取得したいデータを設定
+	$contents = array();
+	$myQuery = new WP_Query();
 	$param = array(
 		'post_type' => 'blog',
 		'posts_per_page' => 3,
@@ -143,5 +143,5 @@ function org_api()
 			));
 		endwhile;
 	endif;
-	return $contents; // WP REST APIを利用するときはjsonで返ってくる様に設定されているので、json_encodeは必要ありません。
+	return $contents;
 }
