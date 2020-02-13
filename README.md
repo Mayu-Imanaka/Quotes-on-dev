@@ -12,6 +12,8 @@
 ## General info
 This is a website called Quotes on Dev using the WordPress REST API.
 
+It'll show a random quotes everytime visiting the site.
+
 You can submit a quote via submission form. 
 
 
