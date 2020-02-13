@@ -1,5 +1,9 @@
 # Quotes on Dev
 
+![Quotes on Dev – Just another WordPress site](https://user-images.githubusercontent.com/42310122/74398310-04f42e00-4dcc-11ea-8714-0e33a0a8741c.png)
+![Submit a Quote – Quotes on Dev](https://user-images.githubusercontent.com/42310122/74398313-06255b00-4dcc-11ea-80e8-d46f437dc64b.png)
+
+
 ## Table of contents
 * [General info](#general-info)
 * [Technology](#technology)
