@@ -12,10 +12,9 @@
 ## General info
 This is a website called Quotes on Dev using the WordPress REST API.
 
-It'll show a random quotes everytime visiting the site.
+It shows a random quotes everytime visiting the site.
 
 You can submit a quote via submission form. 
-
 
 
 <img src='https://user-images.githubusercontent.com/42310122/74398313-06255b00-4dcc-11ea-80e8-d46f437dc64b.png' width="600px">
